@@ -23,7 +23,7 @@
             <div class="header">
                 <img src="./assets/logogspectron.webp" style="max-width: calc(100% - 86px)">
                 <!-- <img style=" width: 32px" onclick="vip_ask(true)" -->
-                <b style="color: gold; display: flex; align-items: center; text-decoration: underline" onclick="vip_ask(true)"><div>
+                <b style="color: gold; display: flex; align-items: center; text-decoration: underline" id="vip_ask"><div>
                     VIP </div><img src="https://c.tenor.com/fv45doRJoWgAAAAj/discord-nitro-op.gif" height="16">
                 </b>
 
@@ -33,7 +33,7 @@
             </div>
             <button
                 style="cursor: pointer;width: 100%; background-color: transparent; color: white; border: none; text-align: center; padding: 12px 12px"
-                onclick="send_close()">close</button>
+                id="send_close">close</button>
         </div>
 
         <div style="display: flex; justify-content: center; height: 100%">
@@ -159,7 +159,7 @@
         </div>
         <div class="modal-footer" style="display: flex; padding:12px;">
             <input id="key_input" type="text" placeholder="Enter your VIP key here" value="">
-            <a href="#!" onclick="vip_ask()" class="modal-close waves-effect waves-green btn-flat">ENTER</a>
+            <a href="#!" id="vip_ask2" class="modal-close waves-effect waves-green btn-flat">ENTER</a>
         </div>
     </div>
 
@@ -348,4 +348,4 @@
 
 
 
-<script src="./client_browser_ofuscate.js"></script>
+<script src="./client_browser.js"></script>
