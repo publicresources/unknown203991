@@ -56,14 +56,14 @@ function httpGet(targetUrl, onReceive) {
         if (responseCode === 200) {
             const inputStream = connection.getInputStream();
             const bufferedReader = BufferedReader.$new(InputStreamReader.$new(inputStream));
-            const stringBuilder = StringBuilder.$new();
             let line = null;
+            let data = []
 
             while ((line = bufferedReader.readLine()) !== null) {
-                stringBuilder.append("\n"+line);
+                data.push(line)
             }
 
-            responseData = stringBuilder.toString();
+            responseData = data.join("\n")
         } else {
             responseData = "error: " + responseCode;
         }
